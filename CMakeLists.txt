@@ -21,7 +21,7 @@ if(UIN_ACTIVER_SANITIZERS AND NOT MSVC)
         -fsanitize=address,undefined)
 endif()
 
-add_library(uincampus_core src/version.cpp)
+add_library(uincampus_core src/version.cpp src/regles.cpp src/saisie.cpp)
 target_include_directories(uincampus_core PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_compile_definitions(uincampus_core PRIVATE UIN_VERSION="${PROJECT_VERSION}")
 target_link_libraries(uincampus_core PRIVATE uincampus_options)
